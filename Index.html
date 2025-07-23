@@ -23,11 +23,8 @@
     }
     .texturing-video {
       max-height: 384px; /* Ограничение высоты видео (~2K адаптировано для веба) */
-      max-width: 100%; /* Адаптивность */
       width: auto; /* Сохранение пропорций */
-      height: auto; /* Адаптивная высота */
       margin: 0 auto; /* Центрирование */
-      display: block; /* Устранение лишних отступов */
     }
     .swiper-button-prev, .swiper-button-next {
       color: #93c5fd; /* text-blue-300 для стрелок */
@@ -35,7 +32,6 @@
   </style>
 </head>
 <body class="bg-gray-950 text-white font-sans">
-  <!-- Заголовок -->
   <header class="h-screen flex flex-col items-center justify-center bg-cover bg-center mx-4 my-8 rounded-lg shadow-lg" style="background-image: url('/assets/images/background.jpg')">
     <img src="/assets/images/logo.png" alt="Bukat1x Logo" class="logo-img mb-4 object-contain">
     <h1 class="text-4xl md:text-6xl font-bold">Добро пожаловать в портфолио Bukat1x</h1>
@@ -47,10 +43,8 @@
     </div>
   </header>
 
-  <!-- Портфолио -->
   <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Портфолио</h2>
   <section id="portfolio" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
-    <!-- Hard-surface модели -->
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Hard-surface модели</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
@@ -65,7 +59,6 @@
         </div>
       </div>
     </div>
-    <!-- Дизайн помещений -->
     <div class="container mx-auto px-4 mt-12">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Дизайн помещений</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
@@ -80,7 +73,6 @@
         </div>
       </div>
     </div>
-    <!-- Персонажи -->
     <div class="container mx-auto px-4 mt-12">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Персонажи</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
@@ -95,7 +87,6 @@
         </div>
       </div>
     </div>
-    <!-- Текстурирование -->
     <div class="container mx-auto px-4 mt-12">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Текстурирование</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
@@ -103,24 +94,18 @@
         <div class="swiper texturing-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <video class="texturing-video" muted playsinline loop>
+              <video autoplay loop muted playsinline class="texturing-video">
                 <source src="/assets/videos/texturing1.webm" type="video/webm">
-                <source src="/assets/videos/texturing1.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
               </video>
             </div>
             <div class="swiper-slide">
-              <video class="texturing-video" muted playsinline loop>
+              <video autoplay loop muted playsinline class="texturing-video">
                 <source src="/assets/videos/texturing2.webm" type="video/webm">
-                <source src="/assets/videos/texturing2.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
               </video>
             </div>
             <div class="swiper-slide">
-              <video class="texturing-video" muted playsinline loop>
+              <video autoplay loop muted playsinline class="texturing-video">
                 <source src="/assets/videos/texturing3.webm" type="video/webm">
-                <source src="/assets/videos/texturing3.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
               </video>
             </div>
           </div>
@@ -131,156 +116,50 @@
     </div>
   </section>
 
-  <!-- Цены на услуги -->
   <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Цены на услуги</h2>
   <section id="pricing" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Цены на услуги</h2>
       <table class="w-full text-left border-collapse">
-        <thead>
-          <tr class="bg-blue-500">
-            <th class="p-4">Услуга</th>
-            <th class="p-4">Описание</th>
-            <th class="p-4">Цена</th>
-          </tr>
-        </thead>
+        <thead><tr class="bg-blue-500"><th class="p-4">Услуга</th><th class="p-4">Описание</th><th class="p-4">Цена</th></tr></thead>
         <tbody>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Hard-surface модель</td>
-            <td class="p-4">Создание 3D-моделей техники, оружия и т.д.</td>
-            <td class="p-4">$100–$500</td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Дизайн интерьера</td>
-            <td class="p-4">Проектирование и визуализация помещений</td>
-            <td class="p-4">$200–$1000</td>
-          </tr>
-          <tr class="border-b border-gray-800">
-            <td class="p-4">Персонажи</td>
-            <td class="p-4">Создание 3D-персонажей для игр и анимации</td>
-            <td class="p-4">$300–$1500</td>
-          </tr>
-          <tr>
-            <td class="p-4">Текстурирование</td>
-            <td class="p-4">Мультяшное и реалистичное текстурирование, низкое и высокое разрешение</td>
-            <td class="p-4">$150–$800</td>
-          </tr>
+          <tr class="border-b border-gray-800"><td class="p-4">Hard-surface модель</td><td class="p-4">Создание 3D-моделей техники, оружия и т.д.</td><td class="p-4">$100–$500</td></tr>
+          <tr class="border-b border-gray-800"><td class="p-4">Дизайн интерьера</td><td class="p-4">Проектирование и визуализация помещений</td><td class="p-4">$200–$1000</td></tr>
+          <tr class="border-b border-gray-800"><td class="p-4">Персонажи</td><td class="p-4">Создание 3D-персонажей для игр и анимации</td><td class="p-4">$300–$1500</td></tr>
+          <tr><td class="p-4">Текстурирование</td><td class="p-4">Мультяшное и реалистичное текстурирование, низкое и высокое разрешение</td><td class="p-4">$150–$800</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- Контакты -->
   <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Контакты</h2>
   <section id="contacts" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-8 text-blue-300">Связаться со мной</h2>
       <div class="flex justify-center space-x-6">
         <a href="mailto:your.email@example.com" class="text-blue-400 hover:text-blue-600">
-          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12.713l11.99-7.996A2 2 0 0022 3H2a2 2 0 00-1.99 1.717L12 12.713zM12 14.287L0 6.27V19a2 2 0 002 2h20a2 2 0 002-2V6.27L12 14.287z"/>
-          </svg>
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l11.99-7.996A2 2 0 0022 3H2a2 2 0 00-1.99 1.717L12 12.713zM12 14.287L0 6.27V19a2 2 0 002 2h20a2 2 0 002-2V6.27L12 14.287z"/></svg>
         </a>
         <a href="https://t.me/yourtelegram" target="_blank" class="text-blue-400 hover:text-blue-600">
-          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.88 8.8c-.02.09-.08.14-.18.14-.08 0-.15-.04-.19-.1l-3.2-7.02-1.68 1.62c-.06.06-.14.09-.22.09s-.16-.03-.22-.09l-3.4-3.3c-.06-.06-.03-.16.06-.19l12.4-4.8c.09-.03.18.03.19.12l.02.73z"/>
-          </svg>
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.88 8.8c-.02.09-.08.14-.18.14-.08 0-.15-.04-.19-.1l-3.2-7.02-1.68 1.62c-.06.06-.14.09-.22.09s-.16-.03-.22-.09l-3.4-3.3c-.06-.06-.03-.16.06-.19l12.4-4.8c.09-.03.18.03.19.12l.02.73z"/></svg>
         </a>
       </div>
       <p class="mt-4">Напишите мне: your.email@example.com</p>
     </div>
   </section>
 
-  <!-- Кнопка "Наверх" -->
   <button id="scrollToTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300" title="Наверх">
     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 2l-10 10h6v10h8v-10h6z"/>
     </svg>
   </button>
 
-  <!-- Подключение Swiper и скрипты -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Инициализация слайдеров для изображений
-    new Swiper('.hardsurface-slider', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
-
-    new Swiper('.interior-slider', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
-
-    new Swiper('.characters-slider', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
-
-    // Инициализация слайдера для текстурирования с управлением видео
-    const texturingSwiper = new Swiper('.texturing-slider', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      // Управление воспроизведением видео
-      on: {
-        init: function () {
-          // Воспроизводим видео в активном слайде при инициализации
-          const activeSlide = this.slides[this.activeIndex];
-          const activeVideo = activeSlide.querySelector('video');
-          if (activeVideo) {
-            activeVideo.play().catch(error => {
-              console.error('Ошибка воспроизведения видео:', error);
-            });
-          }
-        },
-        slideChange: function () {
-          // Останавливаем все видео
-          const videos = document.querySelectorAll('.texturing-slider video');
-          videos.forEach(video => {
-            video.pause();
-            video.currentTime = 0; // Сбрасываем время для начала с начала
-          });
-
-          // Воспроизводим видео в активном слайде
-          const activeSlide = this.slides[this.activeIndex];
-          const activeVideo = activeSlide.querySelector('video');
-          if (activeVideo) {
-            activeVideo.play().catch(error => {
-              console.error('Ошибка воспроизведения видео:', error);
-            });
-          }
-        }
-      }
-    });
+    new Swiper('.hardsurface-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+    new Swiper('.interior-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+    new Swiper('.characters-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+    new Swiper('.texturing-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, centeredSlides: true });
 
     // Управление кнопкой "Наверх"
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
