@@ -15,6 +15,12 @@
     header {
       background-color: rgba(17, 24, 39, 0.8); /* Полупрозрачный фон для header, соответствует bg-gray-900 */
     }
+    .logo-img {
+      max-height: 192px; /* Высота лого (~192px, адаптировано для 2K) */
+      max-width: 100%; /* Адаптивность для маленьких экранов */
+      width: auto; /* Сохранение пропорций */
+      margin: 0 auto; /* Центрирование */
+    }
     .texturing-video {
       max-height: 384px; /* Ограничение высоты видео (~2K адаптировано для веба) */
       width: auto; /* Сохранение пропорций */
@@ -27,9 +33,7 @@
 </head>
 <body class="bg-gray-950 text-white font-sans">
   <header class="h-screen flex flex-col items-center justify-center bg-cover bg-center mx-4 my-8 rounded-lg shadow-lg" style="background-image: url('/assets/images/background.jpg')">
-    <video autoplay loop muted playsinline class="h-48 mb-4 object-contain">
-      <source src="/assets/videos/logo.webm" type="video/webm">
-    </video>
+    <img src="/assets/images/logo.png" alt="Bukat1x Logo" class="logo-img mb-4 object-contain">
     <h1 class="text-4xl md:text-6xl font-bold">Добро пожаловать в портфолио Bukat1x</h1>
     <p class="text-xl mt-4">3D-модели, дизайн интерьеров, персонажи и текстурирование</p>
     <div class="mt-6 flex space-x-4">
