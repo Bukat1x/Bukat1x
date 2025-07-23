@@ -13,7 +13,7 @@
       font-family: 'Arial', 'Helvetica', sans-serif;
     }
     header {
-      background-color: rgba(17, 24, 39, 0.8); /* Полупрозрачный фон для header, соответствует bg-gray-900 */
+      background-color: rgba(17, 24, 39, 0.8); /* Полупрозрачный фон для header */
     }
     .logo-img {
       max-height: 192px; /* Высота лого (~192px, адаптировано для 2K) */
@@ -29,7 +29,7 @@
     .swiper-button-prev, .swiper-button-next {
       color: #93c5fd; /* text-blue-300 для стрелок */
     }
-    #loading-spinner {
+    #loading-screen {
       position: fixed;
       top: 0;
       left: 0;
@@ -41,8 +41,8 @@
       align-items: center;
       z-index: 1000;
     }
-    #loading-spinner.hidden {
-      display: none; /* Скрываем спиннер после загрузки */
+    #loading-screen.hidden {
+      display: none;
     }
     #loading-spinner::before {
       content: '';
@@ -60,9 +60,13 @@
   </style>
 </head>
 <body class="bg-gray-950 text-white font-sans">
-  <div id="loading-spinner">
+  <!-- Загрузочный экран -->
+  <div id="loading-screen">
+    <div id="loading-spinner"></div>
     <span class="text-blue-300 text-xl">Загрузка видео...</span>
   </div>
+
+  <!-- Шапка -->
   <header class="h-screen flex flex-col items-center justify-center bg-cover bg-center mx-4 my-8 rounded-lg shadow-lg" style="background-image: url('/assets/images/background.jpg')">
     <img src="/assets/images/logo.png" alt="Bukat1x Logo" class="logo-img mb-4 object-contain">
     <h1 class="text-4xl md:text-6xl font-bold">Добро пожаловать в портфолио Bukat1x</h1>
@@ -74,9 +78,11 @@
     </div>
   </header>
 
+  <!-- Заголовок портфолио -->
   <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Портфолио</h2>
   <section id="portfolio" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4">
+      <!-- Hard-surface модели -->
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Hard-surface модели</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
         <div class="swiper hardsurface-slider">
@@ -90,6 +96,7 @@
         </div>
       </div>
     </div>
+    <!-- Дизайн помещений -->
     <div class="container mx-auto px-4 mt-12">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Дизайн помещений</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
@@ -104,6 +111,7 @@
         </div>
       </div>
     </div>
+    <!-- Персонажи -->
     <div class="container mx-auto px-4 mt-12">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Персонажи</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
@@ -118,6 +126,7 @@
         </div>
       </div>
     </div>
+    <!-- Текстурирование -->
     <div class="container mx-auto px-4 mt-12">
       <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Текстурирование</h2>
       <div class="bg-gray-800 p-6 rounded-lg shadow-md">
@@ -150,6 +159,7 @@
     </div>
   </section>
 
+  <!-- Цены на услуги -->
   <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Цены на услуги</h2>
   <section id="pricing" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4">
@@ -166,6 +176,7 @@
     </div>
   </section>
 
+  <!-- Контакты -->
   <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Контакты</h2>
   <section id="contacts" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4 text-center">
@@ -182,21 +193,43 @@
     </div>
   </section>
 
+  <!-- Кнопка "Наверх" -->
   <button id="scrollToTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300" title="Наверх">
     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 2l-10 10h6v10h8v-10h6z"/>
     </svg>
   </button>
 
+  <!-- Скрипты -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Инициализация Swiper
-    new Swiper('.hardsurface-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
-    new Swiper('.interior-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
-    new Swiper('.characters-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
-    new Swiper('.texturing-slider', { slidesPerView: 1, spaceBetween: 10, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, centeredSlides: true });
+    // Инициализация Swiper для слайдеров
+    new Swiper('.hardsurface-slider', { 
+      slidesPerView: 1, 
+      spaceBetween: 10, 
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } 
+    });
+    new Swiper('.interior-slider', { 
+      slidesPerView: 1, 
+      spaceBetween: 10, 
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } 
+    });
+    new Swiper('.characters-slider', { 
+      slidesPerView: 1, 
+      spaceBetween: 10, 
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } 
+    });
+    new Swiper('.texturing-slider', { 
+      slidesPerView: 1, 
+      spaceBetween: 10, 
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
+      centeredSlides: true 
+    });
 
-    // Управление кнопкой "Наверх"
+    // Кнопка "Наверх"
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
@@ -211,28 +244,29 @@
 
     // Управление загрузочным экраном
     document.addEventListener('DOMContentLoaded', () => {
-      const loadingSpinner = document.getElementById('loading-spinner');
-      const videos = document.querySelectorAll('.texturing-slider video');
+      const loadingScreen = document.getElementById('loading-screen');
+      const videos = document.querySelectorAll('.texturing-video');
       let loadedVideos = 0;
-      const totalVideos = videos.length;
 
-      if (totalVideos === 0) {
-        loadingSpinner.classList.add('hidden');
+      if (videos.length === 0) {
+        loadingScreen.classList.add('hidden');
         return;
       }
 
       videos.forEach(video => {
         video.addEventListener('canplaythrough', () => {
           loadedVideos++;
-          if (loadedVideos === totalVideos) {
-            loadingSpinner.classList.add('hidden');
+          if (loadedVideos === videos.length) {
+            loadingScreen.classList.add('hidden');
           }
         });
-        video.addEventListener('error', (e) => {
-          console.error(`Ошибка загрузки видео: ${e.target.src}`);
+
+        // Обработка ошибок загрузки видео
+        video.addEventListener('error', () => {
+          console.error('Ошибка загрузки видео:', video.currentSrc);
           loadedVideos++;
-          if (loadedVideos === totalVideos) {
-            loadingSpinner.classList.add('hidden');
+          if (loadedVideos === videos.length) {
+            loadingScreen.classList.add('hidden');
           }
         });
       });
