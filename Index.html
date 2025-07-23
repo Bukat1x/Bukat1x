@@ -13,16 +13,19 @@
       font-family: 'Arial', 'Helvetica', sans-serif;
     }
     header {
-      background-color: rgba(31, 41, 55, 0.8); /* Полупрозрачный серый фон */
+      background-color: rgba(17, 24, 39, 0.8); /* Полупрозрачный фон для header, соответствует bg-gray-900 */
     }
     .texturing-video {
       max-height: 384px; /* Ограничение высоты видео (~2K адаптировано для веба) */
       width: auto; /* Сохранение пропорций */
       margin: 0 auto; /* Центрирование */
     }
+    .swiper-button-prev, .swiper-button-next {
+      color: #93c5fd; /* text-blue-300 для стрелок */
+    }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-950 text-white font-sans">
   <header class="h-screen flex flex-col items-center justify-center bg-cover bg-center mx-4 my-8 rounded-lg shadow-lg" style="background-image: url('/assets/images/background.jpg')">
     <video autoplay loop muted playsinline class="h-48 mb-4 object-contain">
       <source src="/assets/videos/logo.webm" type="video/webm">
@@ -30,97 +33,105 @@
     <h1 class="text-4xl md:text-6xl font-bold">Добро пожаловать в портфолио Bukat1x</h1>
     <p class="text-xl mt-4">3D-модели, дизайн интерьеров, персонажи и текстурирование</p>
     <div class="mt-6 flex space-x-4">
-      <a href="#portfolio" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Посмотреть работы</a>
-      <a href="#pricing" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Цены на услуги</a>
-      <a href="#contacts" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Связаться</a>
+      <a href="#portfolio" class="px-6 py-3 bg-blue-500 rounded-lg hover:bg-blue-600">Посмотреть работы</a>
+      <a href="#pricing" class="px-6 py-3 bg-blue-500 rounded-lg hover:bg-blue-600">Цены на услуги</a>
+      <a href="#contacts" class="px-6 py-3 bg-blue-500 rounded-lg hover:bg-blue-600">Связаться</a>
     </div>
   </header>
 
-  <h2 class="text-4xl font-bold text-center my-8">Портфолио</h2>
-  <section id="portfolio" class="py-16 bg-gray-800 mx-4 my-8 rounded-lg shadow-lg">
+  <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Портфолио</h2>
+  <section id="portfolio" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center">Hard-surface модели</h2>
-      <div class="swiper hardsurface-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="/assets/images/hardsurface1.jpg" alt="Hard-surface 1" class="w-full h-64 object-cover"></div>
-          <div class="swiper-slide"><img src="/assets/images/hardsurface2.jpg" alt="Hard-surface 2" class="w-full h-64 object-cover"></div>
-          <div class="swiper-slide"><img src="/assets/images/hardsurface3.jpg" alt="Hard-surface 3" class="w-full h-64 object-cover"></div>
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Hard-surface модели</h2>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="swiper hardsurface-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/assets/images/hardsurface1.jpg" alt="Hard-surface 1" class="w-full h-64 object-cover"></div>
+            <div class="swiper-slide"><img src="/assets/images/hardsurface2.jpg" alt="Hard-surface 2" class="w-full h-64 object-cover"></div>
+            <div class="swiper-slide"><img src="/assets/images/hardsurface3.jpg" alt="Hard-surface 3" class="w-full h-64 object-cover"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>
     <div class="container mx-auto px-4 mt-12">
-      <h2 class="text-3xl font-bold mb-8 text-center">Дизайн помещений</h2>
-      <div class="swiper interior-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="/assets/images/interior1.jpg" alt="Interior 1" class="w-full h-64 object-cover"></div>
-          <div class="swiper-slide"><img src="/assets/images/interior2.jpg" alt="Interior 2" class="w-full h-64 object-cover"></div>
-          <div class="swiper-slide"><img src="/assets/images/interior3.jpg" alt="Interior 3" class="w-full h-64 object-cover"></div>
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Дизайн помещений</h2>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="swiper interior-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/assets/images/interior1.jpg" alt="Interior 1" class="w-full h-64 object-cover"></div>
+            <div class="swiper-slide"><img src="/assets/images/interior2.jpg" alt="Interior 2" class="w-full h-64 object-cover"></div>
+            <div class="swiper-slide"><img src="/assets/images/interior3.jpg" alt="Interior 3" class="w-full h-64 object-cover"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>
     <div class="container mx-auto px-4 mt-12">
-      <h2 class="text-3xl font-bold mb-8 text-center">Персонажи</h2>
-      <div class="swiper characters-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="/assets/images/character1.jpg" alt="Character 1" class="w-full h-64 object-cover"></div>
-          <div class="swiper-slide"><img src="/assets/images/character2.jpg" alt="Character 2" class="w-full h-64 object-cover"></div>
-          <div class="swiper-slide"><img src="/assets/images/character3.jpg" alt="Character 3" class="w-full h-64 object-cover"></div>
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Персонажи</h2>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="swiper characters-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/assets/images/character1.jpg" alt="Character 1" class="w-full h-64 object-cover"></div>
+            <div class="swiper-slide"><img src="/assets/images/character2.jpg" alt="Character 2" class="w-full h-64 object-cover"></div>
+            <div class="swiper-slide"><img src="/assets/images/character3.jpg" alt="Character 3" class="w-full h-64 object-cover"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>
     <div class="container mx-auto px-4 mt-12">
-      <h2 class="text-3xl font-bold mb-8 text-center">Текстурирование</h2>
-      <p class="text-lg text-center mb-8">Мультяшное и реалистичное текстурирование, с низким и высоким разрешением</p>
-      <div class="swiper texturing-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <video autoplay loop muted playsinline class="texturing-video">
-              <source src="/assets/videos/texturing1.webm" type="video/webm">
-            </video>
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Текстурирование</h2>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <p class="text-lg text-center mb-8">Мультяшное и реалистичное текстурирование, с низким и высоким разрешением</p>
+        <div class="swiper texturing-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video autoplay loop muted playsinline class="texturing-video">
+                <source src="/assets/videos/texturing1.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay loop muted playsinline class="texturing-video">
+                <source src="/assets/videos/texturing2.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay loop muted playsinline class="texturing-video">
+                <source src="/assets/videos/texturing3.webm" type="video/webm">
+              </video>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <video autoplay loop muted playsinline class="texturing-video">
-              <source src="/assets/videos/texturing2.webm" type="video/webm">
-            </video>
-          </div>
-          <div class="swiper-slide">
-            <video autoplay loop muted playsinline class="texturing-video">
-              <source src="/assets/videos/texturing3.webm" type="video/webm">
-            </video>
-          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
 
-  <h2 class="text-4xl font-bold text-center my-8">Цены на услуги</h2>
-  <section id="pricing" class="py-16 bg-gray-800 mx-4 my-8 rounded-lg shadow-lg">
+  <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Цены на услуги</h2>
+  <section id="pricing" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center">Цены на услуги</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Цены на услуги</h2>
       <table class="w-full text-left border-collapse">
-        <thead><tr class="bg-blue-600"><th class="p-4">Услуга</th><th class="p-4">Описание</th><th class="p-4">Цена</th></tr></thead>
+        <thead><tr class="bg-blue-500"><th class="p-4">Услуга</th><th class="p-4">Описание</th><th class="p-4">Цена</th></tr></thead>
         <tbody>
-          <tr class="border-b border-gray-700"><td class="p-4">Hard-surface модель</td><td class="p-4">Создание 3D-моделей техники, оружия и т.д.</td><td class="p-4">$100–$500</td></tr>
-          <tr class="border-b border-gray-700"><td class="p-4">Дизайн интерьера</td><td class="p-4">Проектирование и визуализация помещений</td><td class="p-4">$200–$1000</td></tr>
-          <tr class="border-b border-gray-700"><td class="p-4">Персонажи</td><td class="p-4">Создание 3D-персонажей для игр и анимации</td><td class="p-4">$300–$1500</td></tr>
+          <tr class="border-b border-gray-800"><td class="p-4">Hard-surface модель</td><td class="p-4">Создание 3D-моделей техники, оружия и т.д.</td><td class="p-4">$100–$500</td></tr>
+          <tr class="border-b border-gray-800"><td class="p-4">Дизайн интерьера</td><td class="p-4">Проектирование и визуализация помещений</td><td class="p-4">$200–$1000</td></tr>
+          <tr class="border-b border-gray-800"><td class="p-4">Персонажи</td><td class="p-4">Создание 3D-персонажей для игр и анимации</td><td class="p-4">$300–$1500</td></tr>
           <tr><td class="p-4">Текстурирование</td><td class="p-4">Мультяшное и реалистичное текстурирование, низкое и высокое разрешение</td><td class="p-4">$150–$800</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <h2 class="text-4xl font-bold text-center my-8">Контакты</h2>
-  <section id="contacts" class="py-16 bg-gray-800 mx-4 my-8 rounded-lg shadow-lg">
+  <h2 class="text-4xl font-bold text-center my-8 text-blue-300">Контакты</h2>
+  <section id="contacts" class="py-16 bg-gray-900 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Связаться со мной</h2>
+      <h2 class="text-3xl font-bold mb-8 text-blue-300">Связаться со мной</h2>
       <div class="flex justify-center space-x-6">
         <a href="mailto:your.email@example.com" class="text-blue-400 hover:text-blue-600">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l11.99-7.996A2 2 0 0022 3H2a2 2 0 00-1.99 1.717L12 12.713zM12 14.287L0 6.27V19a2 2 0 002 2h20a2 2 0 002-2V6.27L12 14.287z"/></svg>
@@ -133,7 +144,7 @@
     </div>
   </section>
 
-  <button id="scrollToTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300" title="Наверх">
+  <button id="scrollToTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300" title="Наверх">
     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
       <path d="M12 2l-10 10h6v10h8v-10h6z"/>
     </svg>
