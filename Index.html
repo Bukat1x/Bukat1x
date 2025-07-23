@@ -12,19 +12,27 @@
     body {
       font-family: 'Arial', 'Helvetica', sans-serif;
     }
+    header {
+      background-color: rgba(31, 41, 55, 0.8); /* Полупрозрачный серый фон */
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
-  <header class="h-screen flex flex-col items-center justify-center bg-cover bg-center bg-gray-800 shadow-lg" style="background-image: url('/assets/images/background.jpg')">
+  <header class="h-screen flex flex-col items-center justify-center bg-cover bg-center mx-4 my-8 rounded-lg shadow-lg" style="background-image: url('/assets/images/background.jpg')">
     <video autoplay loop muted playsinline class="h-48 mb-4 object-contain">
       <source src="/assets/videos/logo.webm" type="video/webm">
     </video>
     <h1 class="text-4xl md:text-6xl font-bold">Добро пожаловать в портфолио Bukat1x</h1>
     <p class="text-xl mt-4">3D-модели, дизайн интерьеров и персонажи</p>
-    <a href="#portfolio" class="mt-6 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Посмотреть работы</a>
+    <div class="mt-6 flex space-x-4">
+      <a href="#portfolio" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Посмотреть работы</a>
+      <a href="#pricing" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Цены на услуги</a>
+      <a href="#contacts" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700">Связаться</a>
+    </div>
   </header>
 
-  <section id="portfolio" class="py-16 bg-gray-800 shadow-lg">
+  <h2 class="text-4xl font-bold text-center my-8">Портфолио</h2>
+  <section id="portfolio" class="py-16 bg-gray-800 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center">Hard-surface модели</h2>
       <div class="swiper hardsurface-slider">
@@ -63,7 +71,8 @@
     </div>
   </section>
 
-  <section id="pricing" class="py-16 bg-gray-800 shadow-lg">
+  <h2 class="text-4xl font-bold text-center my-8">Цены на услуги</h2>
+  <section id="pricing" class="py-16 bg-gray-800 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center">Цены на услуги</h2>
       <table class="w-full text-left border-collapse">
@@ -77,7 +86,8 @@
     </div>
   </section>
 
-  <section id="contacts" class="py-16 bg-gray-800 shadow-lg">
+  <h2 class="text-4xl font-bold text-center my-8">Контакты</h2>
+  <section id="contacts" class="py-16 bg-gray-800 mx-4 my-8 rounded-lg shadow-lg">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-8">Связаться со мной</h2>
       <div class="flex justify-center space-x-6">
